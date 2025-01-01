@@ -6,13 +6,13 @@
 /*   By: facosta <facosta@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 16:38:51 by facosta           #+#    #+#             */
-/*   Updated: 2025/01/01 23:59:34 by facosta          ###   ########.fr       */
+/*   Updated: 2025/01/02 00:19:36 by facosta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_hexadec(unsigned long long n, int is_uppercase)
+int	ft_print_hexadec(t_max_length_uint n, int is_uppercase)
 {
 	t_base	unsigned_dec_base;
 

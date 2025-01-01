@@ -7,7 +7,7 @@ AR			= ar
 ARFLAGS		= rcs
 RM			= rm -rf
 # -I: specify additional directories with header files
-INCLUDE		= -I include
+INCLUDE		= -I./include -I./libft
 
 OBJ_DIR		= ./obj/
 SRC_DIR		= ./src/
