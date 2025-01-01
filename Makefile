@@ -17,7 +17,8 @@ LIBFT		= $(LIBFT_DIR)libft.a
 
 # files #######################################################################
 SRC_NAMES	= ft_printf ft_print_char ft_print_str ft_print_dec \
-			ft_print_unsigned_dec ft_print_hexadec ft_print_pointer
+			ft_print_unsigned_dec ft_print_hexadec ft_print_pointer \
+			ft_print_digits
 SRC_FILES	= $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_NAMES)))
 OBJ_FILES	= $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_NAMES)))
 

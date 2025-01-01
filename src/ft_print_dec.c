@@ -6,7 +6,7 @@
 /*   By: facosta <facosta@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 20:48:15 by facosta           #+#    #+#             */
-/*   Updated: 2024/12/30 20:59:49 by facosta          ###   ########.fr       */
+/*   Updated: 2025/01/01 23:50:49 by facosta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 int	ft_print_dec(int n)
 {
-	int		number_length;
-	char	*number_str;
+	int		print_length;
 
-	number_length = 0;
-	number_str = ft_itoa(n);
-	number_length = ft_print_str(number_str);
-	free(number_str);
-	return (number_length);
+	print_length = 0;
+	if (n < 0)
+	{
+		print_length += ft_print_char('-');
+		n *= -1;
+	}
+	print_length += ft_print_unsigned_dec(n);
+	return (print_length);
 }

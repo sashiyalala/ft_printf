@@ -6,7 +6,7 @@
 /*   By: facosta <facosta@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 22:37:42 by facosta           #+#    #+#             */
-/*   Updated: 2025/01/01 22:22:59 by facosta          ###   ########.fr       */
+/*   Updated: 2025/01/02 00:04:31 by facosta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	ft_interpolate_str(char f_type, va_list args)
 	return (0);
 }
 
-static int	ft_parse_f_str(char *f_str, va_list args)
+static int	ft_parse_f_str(const char *f_str, va_list args)
 {
 	int	idx;
 	int	print_length;
@@ -54,7 +54,6 @@ static int	ft_parse_f_str(char *f_str, va_list args)
 int	ft_printf(char const *ct_f_str, ...)
 {
 	va_list	args;
-	char	*f_str;
 	int		print_length;
 
 	print_length = 0;
@@ -62,12 +61,8 @@ int	ft_printf(char const *ct_f_str, ...)
 		return (-1);
 	if (*ct_f_str == '\0')
 		return (print_length);
-	f_str = ft_strdup(ct_f_str);
-	if (!f_str || *f_str == '\0')
-		return (0);
 	va_start(args, ct_f_str);
-	print_length = ft_parse_f_str(f_str, args);
+	print_length = ft_parse_f_str(ct_f_str, args);
 	va_end(args);
-	free(f_str);
 	return (print_length);
 }
