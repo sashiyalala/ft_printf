@@ -1,7 +1,7 @@
 # variables ###################################################################
 NAME		= libftprintf.a
 
-CC			= gcc
+CC			= cc
 CFLAGS		+= -Wall -Wextra -Werror
 AR			= ar
 ARFLAGS		= rcs
