@@ -6,7 +6,7 @@
 /*   By: facosta <facosta@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/29 22:37:42 by facosta           #+#    #+#             */
-/*   Updated: 2025/01/05 12:42:18 by facosta          ###   ########.fr       */
+/*   Updated: 2025/01/18 13:07:29 by facosta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ int	ft_printf(char const *ct_f_str, ...)
 	va_end(args);
 	return (print_length);
 }
-
 
 // #include <stdio.h>
 // #include "../include/ft_printf.h"
